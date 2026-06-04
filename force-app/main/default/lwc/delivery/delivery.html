@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Delivery" icon-name="standard:orders">
+        <div class="slds-m-around_medium">
+
+            <lightning-record-edit-form 
+                object-api-name="Delivery__c"
+                onsuccess={handleSuccess}>
+
+                <lightning-messages></lightning-messages>
+
+                <!-- Auto Number (Read Only) -->
+                <lightning-input-field field-name="Name"></lightning-input-field>
+
+                <!-- Lookup Fields -->
+                <lightning-input-field field-name="Customer_Contact__c"></lightning-input-field>
+                <lightning-input-field field-name="Orders__c"></lightning-input-field>
+
+                <!-- Delivery Details -->
+                <lightning-input-field field-name="OTP__c"></lightning-input-field>
+                <lightning-input-field field-name="Entered_OTP__c"></lightning-input-field>
+                <lightning-input-field field-name="OTP_Verified__c"></lightning-input-field>
+                <lightning-input-field field-name="Delivery_Status__c"></lightning-input-field>
+
+                <br/>
+
+                <lightning-button 
+                    type="submit"
+                    label="Save"
+                    variant="brand">
+                </lightning-button>
+
+            </lightning-record-edit-form>
+
+        </div>
+    </lightning-card>
+</template>

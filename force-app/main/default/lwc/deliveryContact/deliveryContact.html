@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Delivery Contact" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+
+            <lightning-record-edit-form 
+                object-api-name="Delivery_Contact__c"
+                onsuccess={handleSuccess}>
+
+                <lightning-messages></lightning-messages>
+
+                <!-- Basic Info -->
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Gender__c"></lightning-input-field>
+                <lightning-input-field field-name="Phone_Number__c"></lightning-input-field>
+                <lightning-input-field field-name="License__c"></lightning-input-field>
+
+                <!-- Personal Info -->
+                <lightning-input-field field-name="Date_of_Birth__c"></lightning-input-field>
+                <lightning-input-field field-name="Email__c"></lightning-input-field>
+
+                <!-- Experience -->
+                <lightning-input-field field-name="Experience__c"></lightning-input-field>
+
+                <br/>
+
+                <lightning-button 
+                    type="submit"
+                    label="Save"
+                    variant="brand">
+                </lightning-button>
+
+            </lightning-record-edit-form>
+
+        </div>
+    </lightning-card>
+</template>
