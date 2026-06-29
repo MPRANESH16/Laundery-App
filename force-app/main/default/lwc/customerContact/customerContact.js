@@ -12,4 +12,11 @@ export default class CustomerContact extends LightningElement {
             })
         );
     }
+
+    handleError(event){
+        console.log('FULL ERROR');
+        console.log(event.detail);
+
+        alert(JSON.stringify(event.detail));
+    }
 }

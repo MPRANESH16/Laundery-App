@@ -2,13 +2,16 @@
     <lightning-card title="Customer Contact" icon-name="standard:contact">
         <div class="slds-m-around_medium">
 
-            <lightning-record-edit-form
-    
-            record-id={recordId}
+            <!-- <lightning-record-edit-form
     
             object-api-name="Customer_Contact__c"
     
-            onsuccess={handleSuccess}>
+            onsuccess={handleSuccess}> -->
+
+            <lightning-record-edit-form
+    object-api-name="Customer_Contact__c"
+    onsuccess={handleSuccess}
+    onerror={handleError}>
 
                 <lightning-messages></lightning-messages>
 
